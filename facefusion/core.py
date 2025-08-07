@@ -7,7 +7,7 @@ from time import time
 
 import numpy
 
-from facefusion import benchmarker, cli_helper, content_analyser, face_classifier, face_detector, face_landmarker, face_masker, face_recognizer, hash_helper, logger, process_manager, state_manager, video_manager, voice_extractor, wording
+from facefusion import benchmarker, cli_helper, face_classifier, face_detector, face_landmarker, face_masker, face_recognizer, hash_helper, logger, process_manager, state_manager, video_manager, voice_extractor, wording
 from facefusion.args import apply_args, collect_job_args, reduce_job_args, reduce_step_args
 from facefusion.common_helper import get_first
 from facefusion.content_analyser import analyse_image, analyse_video
@@ -140,7 +140,6 @@ def processors_pre_check() -> bool:
 def force_download() -> ErrorCode:
 	common_modules =\
 	[
-		content_analyser,
 		face_classifier,
 		face_detector,
 		face_landmarker,
